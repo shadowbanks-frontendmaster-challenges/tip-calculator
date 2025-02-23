@@ -1,0 +1,155 @@
+@use "./base/reset_css";
+@use "./mixin/media_queries" as mq;
+
+$Strong-Cyan: hsl(172, 67%, 45%);
+
+$Very-Dark-Cyan: hsl(186, 100%, 15%);
+$Dark-Grayish-Cyan: hsl(186, 14%, 43%);
+$Grayish-Cyan: hsl(184, 14%, 56%);
+$Light-Grayish-Cyan: hsl(185, 41%, 84%);
+$Very-Light-Grayish-Cyan: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+
+$form-input-size: 24px;
+
+$font-fam: "Space Mono", monospace;
+$weight: 700;
+
+body {
+  background-color: $Light-Grayish-Cyan;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-fam;
+}
+
+header {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  color: $Dark-Grayish-Cyan;
+  h1 {
+    font-size: 1.6rem;
+    font-weight: $weight;
+  }
+  span {
+    display: block;
+  }
+}
+main {
+  min-height: 85vh;
+  background-color: $White;
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  button {
+    border: none;
+    text-align: center;
+    cursor: pointer;
+  }
+  .sub-heading {
+    color: $Dark-Grayish-Cyan;
+    font-weight: bold;
+    padding: 0.4rem 0;
+  }
+
+  section {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    .input-container{
+      position: relative;
+
+      .icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1rem;
+        color: $Dark-Grayish-Cyan;
+      }
+    }
+    .input {
+      background-color: $Very-Light-Grayish-Cyan;
+      width: 100%;
+      // height: 3rem;
+      border-radius: 0.4rem;
+      color: $Very-Dark-Cyan;
+      font-size: $form-input-size;
+      padding: 0.4rem 1rem;
+      font-weight: $weight;
+      text-align: right;
+    }
+    .tip-percent {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: .5rem 0;
+
+      button {
+        font-weight: $weight;
+        padding: 0.5rem 0;
+        font-size: $form-input-size;
+        border-radius: 0.3rem;
+      }
+      .percent {
+        background-color: $Very-Dark-Cyan;
+        color: $White;
+      }
+
+      .custom {
+        background-color: $Very-Light-Grayish-Cyan;
+        color: $Dark-Grayish-Cyan;
+      }
+      .active {
+        background-color: $Strong-Cyan;
+        color: $Very-Dark-Cyan;
+      }
+    }
+  }
+
+  .summary {
+    background-color: $Very-Dark-Cyan;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding-top: 2rem;
+
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .sub-title {
+        color: $White;
+        span {
+          color: $Grayish-Cyan;
+          display: block;
+          font-size: 0.8rem;
+        }
+      }
+      .price {
+        color: $Strong-Cyan;
+        font-size: 2rem;
+        font-weight: $weight;
+      }
+    }
+    .reset-btn {
+      padding: 0.5rem 0;
+      background-color: $Strong-Cyan;
+      color: $Very-Dark-Cyan;
+      border-radius: 0.3rem;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: $weight;
+    }
+  }
+}

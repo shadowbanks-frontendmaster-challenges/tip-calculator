@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit; /* Resets font size */
+  margin: 0; /* Resets margin */
+  padding: 0; /* Resets padding */
+  font-weight: normal; /* Resets font weight */
+  line-height: normal; /* Resets line height */
+}
+input {
+  all: unset; /* Resets all styling applied to input */
+  border: none;
+  background: none;
+  box-sizing: border-box;
+}
+
+button {
+  all: unset; /* Resets all default styles */
+  display: inline-block; /* Make sure the button behaves as an inline element */
+  cursor: pointer; /* Ensures the button looks clickable */
+}

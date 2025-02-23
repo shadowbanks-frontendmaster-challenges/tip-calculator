@@ -1,0 +1,167 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit; /* Resets font size */
+  margin: 0; /* Resets margin */
+  padding: 0; /* Resets padding */
+  font-weight: normal; /* Resets font weight */
+  line-height: normal; /* Resets line height */
+}
+
+input {
+  all: unset; /* Resets all styling applied to input */
+  border: none;
+  background: none;
+  box-sizing: border-box;
+}
+
+button {
+  all: unset; /* Resets all default styles */
+  display: inline-block; /* Make sure the button behaves as an inline element */
+  cursor: pointer; /* Ensures the button looks clickable */
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+}
+
+header {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  color: hsl(186, 14%, 43%);
+}
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+header span {
+  display: block;
+}
+
+main {
+  min-height: 85vh;
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+main button {
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+main .sub-heading {
+  color: hsl(186, 14%, 43%);
+  font-weight: bold;
+  padding: 0.4rem 0;
+}
+main section {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+main section .input-container {
+  position: relative;
+}
+main section .input-container .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  color: hsl(186, 14%, 43%);
+}
+main section .input {
+  background-color: hsl(189, 41%, 97%);
+  width: 100%;
+  border-radius: 0.4rem;
+  color: hsl(186, 100%, 15%);
+  font-size: 24px;
+  padding: 0.4rem 1rem;
+  font-weight: 700;
+  text-align: right;
+}
+main section .tip-percent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+main section .tip-percent button {
+  font-weight: 700;
+  padding: 0.5rem 0;
+  font-size: 24px;
+  border-radius: 0.3rem;
+}
+main section .tip-percent .percent {
+  background-color: hsl(186, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+}
+main section .tip-percent .custom {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
+}
+main section .tip-percent .active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(186, 100%, 15%);
+}
+main .summary {
+  background-color: hsl(186, 100%, 15%);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding-top: 2rem;
+}
+main .summary .summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .summary .summary-item .sub-title {
+  color: hsl(0, 0%, 100%);
+}
+main .summary .summary-item .sub-title span {
+  color: hsl(184, 14%, 56%);
+  display: block;
+  font-size: 0.8rem;
+}
+main .summary .summary-item .price {
+  color: hsl(172, 67%, 45%);
+  font-size: 2rem;
+  font-weight: 700;
+}
+main .summary .reset-btn {
+  padding: 0.5rem 0;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(186, 100%, 15%);
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=style.css.map */
