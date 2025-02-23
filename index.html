@@ -27,48 +27,52 @@
       <h1>Spli<span>tter</span></h1>
     </header>
     <main>
-      <section>
-        <h2 class="sub-heading">Bill</h2>
-        <div class="input-container">
-          <img
-            class="icon"
-            src="./images/icon-dollar.svg"
-            alt="dollar icon"
-          /><input type="number" class="input" value="142.55" />
-        </div>
-      </section>
-      <section>
-        <h2 class="sub-heading">Select Tip %</h2>
-        <div class="tip-percent">
-          <button class="percent">5%</button>
-          <button class="percent">10%</button>
-          <button class="percent active">15%</button>
-          <button class="percent">25%</button>
-          <button class="percent">50%</button>
-          <button class="custom">Custom</button>
-        </div>
-      </section>
-      <section>
-        <h2 class="sub-heading">Number of People</h2>
-        <div class="input-container">
-          <img class="icon" src="./images/icon-person.svg" alt="person icon" />
-          <input class="input" type="number" step="1" value="5" />
-        </div>
-      </section>
+      <div class="calculator">
+        <section>
+          <h2 class="sub-heading">Bill</h2>
+          <div class="input-container">
+            <img
+              class="icon"
+              src="./images/icon-dollar.svg"
+              alt="dollar icon"
+            /><input type="number" class="input" value="142.55" />
+          </div>
+        </section>
+        <section>
+          <h2 class="sub-heading">Select Tip %</h2>
+          <div class="tip-percent">
+            <button class="percent">5%</button>
+            <button class="percent">10%</button>
+            <button class="percent active">15%</button>
+            <button class="percent">25%</button>
+            <button class="percent">50%</button>
+            <button class="custom">Custom</button>
+          </div>
+        </section>
+        <section class="number-of-people">
+          <h2 class="sub-heading">Number of People</h2>
+          <div class="input-container">
+            <img class="icon" src="./images/icon-person.svg" alt="person icon" />
+            <input class="input" type="number" step="1" value="5" />
+          </div>
+        </section>
+      </div>
       <section class="summary">
-        <div class="summary-item">
-          <p class="sub-title">
-            Tip Amount
-            <span>/ person</span>
-          </p>
-          <p class="price">$4.27</p>
-        </div>
-        <div class="summary-item">
-          <p class="sub-title">
-            Total
-            <span>/ person</span>
-          </p>
-          <p class="price">$32.97</p>
+        <div class="summary-container">
+          <div class="summary-item">
+            <p class="sub-title">
+              Tip Amount
+              <span>/ person</span>
+            </p>
+            <p class="price">$4.27</p>
+          </div>
+          <div class="summary-item">
+            <p class="sub-title">
+              Total
+              <span>/ person</span>
+            </p>
+            <p class="price">$32.97</p>
+          </div>
         </div>
 
         <button class="reset-btn">Reset</button>

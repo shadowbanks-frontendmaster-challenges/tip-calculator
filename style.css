@@ -63,7 +63,7 @@ main {
   background-color: hsl(0, 0%, 100%);
   width: 100%;
   border-radius: 2rem 2rem 0 0;
-  padding: 1.6rem;
+  padding: 2rem 1.6rem;
   display: flex;
   flex-direction: column;
 }
@@ -134,7 +134,12 @@ main .summary {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 0;
-  padding-top: 2rem;
+}
+main .summary .summary-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 main .summary .summary-item {
   display: flex;
@@ -162,6 +167,69 @@ main .summary .reset-btn {
   font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+@media (min-width: 40rem) {
+  html {
+    font-size: 16px;
+  }
+  main {
+    width: 75%;
+  }
+}
+@media (min-width: 60rem) {
+  html {
+    font-size: 18px;
+  }
+  body {
+    gap: 4rem;
+  }
+  header {
+    height: auto;
+  }
+  main {
+    min-height: auto;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    flex-direction: row;
+    gap: 1.5rem;
+    max-width: 55rem;
+  }
+  main section {
+    width: auto;
+  }
+  main .number-of-people {
+    margin-top: 2rem;
+  }
+  main .calculator {
+    width: auto;
+    flex-grow: 1;
+    width: 50%;
+  }
+  main .calculator .tip-percent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 0.5rem 0;
+  }
+  main .calculator .tip-percent button {
+    padding: 0.3rem 0;
+  }
+  main .summary {
+    padding: 2.5rem;
+    width: 50%;
+  }
+  main .summary .summary-container {
+    gap: 1.5rem;
+  }
+  main .summary .summary-container .price {
+    font-size: 2.7rem;
+  }
+}
+@media (min-width: 100rem) {
+  html {
+    font-size: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -45,7 +45,7 @@ main {
   background-color: $White;
   width: 100%;
   border-radius: 2rem 2rem 0 0;
-  padding: 1.6rem;
+  padding: 2rem 1.6rem;
   display: flex;
   flex-direction: column;
   button {
@@ -62,7 +62,7 @@ main {
   section {
     width: 100%;
     margin-bottom: 1.5rem;
-    .input-container{
+    .input-container {
       position: relative;
 
       .icon {
@@ -88,7 +88,7 @@ main {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
-      margin: .5rem 0;
+      margin: 0.5rem 0;
 
       button {
         font-weight: $weight;
@@ -121,8 +121,14 @@ main {
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 0;
-    padding-top: 2rem;
+    // padding-top: 2rem;
 
+    .summary-container {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
     .summary-item {
       display: flex;
       justify-content: space-between;
@@ -151,5 +157,73 @@ main {
       text-transform: uppercase;
       font-weight: $weight;
     }
+  }
+}
+
+@include mq.respond(tablet) {
+  html {
+    font-size: 16px;
+  }
+
+  main {
+    width: 75%;
+  }
+}
+
+@include mq.respond(desktop) {
+  html {
+    font-size: 18px;
+  }
+  body {
+    gap: 4rem;
+  }
+  header {
+    height: auto;
+  }
+  main {
+    min-height: auto;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    flex-direction: row;
+    gap: 1.5rem;
+    max-width: 55rem;
+    section {
+      width: auto;
+      
+    }
+    .number-of-people{
+      margin-top: 2rem;
+    }
+    .calculator {
+      width: auto;
+      flex-grow: 1;
+      // padding: 0 1.5rem;
+      width: 50%;
+      .tip-percent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin: 0.5rem 0;
+        button {
+          padding: 0.3rem 0;
+        }
+      }
+    }
+    .summary {
+      padding: 2.5rem;
+      width: 50%;
+      .summary-container {
+        gap: 1.5rem;
+        .price {
+          font-size: 2.7rem;
+        }
+      }
+    }
+  }
+}
+
+@include mq.respond(large-desktop) {
+  html{
+    font-size: 20px;
   }
 }
