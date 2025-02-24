@@ -25,6 +25,16 @@ input {
   box-sizing: border-box;
 }
 
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Webkit */
+  margin: 0; /* Removes the default margin */
+}
+
 button {
   all: unset; /* Resets all default styles */
   display: inline-block; /* Make sure the button behaves as an inline element */

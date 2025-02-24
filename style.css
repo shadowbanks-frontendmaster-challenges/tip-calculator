@@ -26,6 +26,16 @@ input {
   box-sizing: border-box;
 }
 
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Webkit */
+  margin: 0; /* Removes the default margin */
+}
+
 button {
   all: unset; /* Resets all default styles */
   display: inline-block; /* Make sure the button behaves as an inline element */
@@ -51,7 +61,7 @@ header {
   color: hsl(186, 14%, 43%);
 }
 header h1 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 header span {
@@ -67,7 +77,7 @@ main {
   display: flex;
   flex-direction: column;
 }
-main button {
+main .button {
   border: none;
   text-align: center;
   cursor: pointer;
@@ -76,6 +86,17 @@ main .sub-heading {
   color: hsl(186, 14%, 43%);
   font-weight: bold;
   padding: 0.4rem 0;
+  display: flex;
+  align-items: center;
+}
+main .error-msg {
+  display: none;
+}
+main .error-msg.active {
+  display: block;
+  color: red;
+  margin-left: auto;
+  font-size: 0.8rem;
 }
 main section {
   width: 100%;
@@ -97,9 +118,19 @@ main section .input {
   border-radius: 0.4rem;
   color: hsl(186, 100%, 15%);
   font-size: 24px;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1rem;
   font-weight: 700;
   text-align: right;
+  box-sizing: border-box;
+}
+main section input::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+main section input:hover {
+  cursor: pointer;
+}
+main section input:focus {
+  outline: 0.1rem solid hsl(172, 67%, 45%);
 }
 main section .tip-percent {
   display: grid;
@@ -107,19 +138,29 @@ main section .tip-percent {
   gap: 1rem;
   margin: 0.5rem 0;
 }
-main section .tip-percent button {
+main section .tip-percent .button {
   font-weight: 700;
-  padding: 0.5rem 0;
+  padding: 0.4rem 0;
   font-size: 24px;
   border-radius: 0.3rem;
 }
-main section .tip-percent .percent {
+main section .tip-percent .tip-button {
   background-color: hsl(186, 100%, 15%);
   color: hsl(0, 0%, 100%);
 }
-main section .tip-percent .custom {
+main section .tip-percent button:hover {
+  background-color: hsl(173, 61%, 77%);
+}
+main section .tip-percent .custom-tip {
   background-color: hsl(189, 41%, 97%);
+  color: hsl(186, 100%, 15%);
+  width: 100%;
+  text-align: right;
+  padding-right: 0.5rem;
+}
+main section .tip-percent .custom-tip::placeholder {
   color: hsl(186, 14%, 43%);
+  text-align: center;
 }
 main section .tip-percent .active {
   background-color: hsl(172, 67%, 45%);
@@ -145,6 +186,7 @@ main .summary .summary-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 main .summary .summary-item .sub-title {
   color: hsl(0, 0%, 100%);
@@ -159,7 +201,7 @@ main .summary .summary-item .price {
   font-size: 2rem;
   font-weight: 700;
 }
-main .summary .reset-btn {
+main .summary .reset-button {
   padding: 0.5rem 0;
   background-color: hsl(172, 67%, 45%);
   color: hsl(186, 100%, 15%);
@@ -167,6 +209,12 @@ main .summary .reset-btn {
   font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 700;
+}
+main .summary .reset-button:hover {
+  background-color: hsl(173, 61%, 77%);
+}
+main .summary .inactive {
+  background-color: hsl(183, 79%, 24%);
 }
 
 @media (min-width: 40rem) {
@@ -179,31 +227,27 @@ main .summary .reset-btn {
 }
 @media (min-width: 60rem) {
   html {
-    font-size: 18px;
+    font-size: 17px;
   }
   body {
     gap: 4rem;
   }
   header {
     height: auto;
+    margin-top: -4rem;
   }
   main {
     min-height: auto;
-    padding: 2rem;
+    padding: 1.8rem;
     border-radius: 1.5rem;
     flex-direction: row;
     gap: 1.5rem;
-    max-width: 55rem;
-  }
-  main section {
-    width: auto;
+    max-width: 58rem;
   }
   main .number-of-people {
     margin-top: 2rem;
   }
   main .calculator {
-    width: auto;
-    flex-grow: 1;
     width: 50%;
   }
   main .calculator .tip-percent {
